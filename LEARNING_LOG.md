@@ -16,3 +16,30 @@
 - The rolling update stopped after the first new Pod failed; the 3 old Pods kept serving traffic, so there was no downtime
 - Fix: built 0.2.0, loaded it into kind, deleted the failing Pod to skip the backoff timer; the rollout then completed on its own
 - Tested `rollout undo` back to 0.1.0, then reverted the manifest so Git and the cluster match again
+
+## Config, health and troubleshooting
+
+**Done:** Moved the app to the `lab` namespace. Added a ConfigMap, a Secret (created imperatively, kept out of Git), readiness and liveness probes, and CPU/memory requests and limits.
+
+**Troubleshooting:**
+
+### CrashLoopBackOff
+- Symptom:
+- How I diagnosed it:
+- Root cause:
+- Fix:
+
+### OOMKilled
+- Symptom:
+- How I diagnosed it:
+- Root cause:
+- Fix:
+
+### ImagePullBackOff
+- Symptom:
+- How I diagnosed it:
+- Root cause:
+- Fix:
+
+### Readiness vs liveness failures
+- What I observed:
