@@ -1,0 +1,10 @@
+colima status
+colima start --cpu 4 --memory 8 --disk 60
+docker ps -a
+
+if lab control plane is off:
+docker start lab-control-plane
+
+if still error:
+kind delete cluster --name lab
+kind create cluster --name lab
